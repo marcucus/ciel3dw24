@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="haut">
+      <p>{{ meteo.city_info.name }}</p>
+      <p>{{ meteo.current_condition.date }}</p>
+      <p>{{ meteo.current_condition.hour }}</p>
+    </div>
+    <p class="country">{{ meteo.city_info.country }}</p>
+    <div class="base">
+      <p>{{ meteo.current_condition.tmp }}<span>°C</span></p>
+      <p class="humidity">Humidité : {{ meteo.current_condition.humidity }}%</p>
+      <div class="icon">
+        <img src="{{ meteo.current_condition.icon_big}}" alt="">
+        <p>{{ meteo.current_condition.condition }}</p>
+      </div>
+    </div>
+    <div class="bas">
+      <img src="https://www.icone-png.com/png/11/10869.png" alt="">
+      <div class="wind">
+        <p>Vitesse du vent : {{ meteo.current_condition.wnd_spd }}</p>
+        <p>Direction du vent : {{ meteo.current_condition.wnd_dir }}</p>
+      </div>
+    </div>
+  </div>
